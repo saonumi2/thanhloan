@@ -1,0 +1,14 @@
+{
+  "name": "thanh-loan-20-10",
+  "version": "1.0.0",
+  "description": "Vietnamese Women's Day gift for Thanh Loan, with flowers, a GLB portrait and photo memories",
+  "private": true,
+  "scripts": {
+    "start": "node server.cjs",
+    "check": "node --check app.js && node --check character.js && node --check config.js && node --check server.cjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}

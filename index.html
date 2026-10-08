@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="application-name" content="Thanh Loan 20-10">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf6f0">
+  <meta name="description" content="Một món quà và bó hoa dành tặng Thanh Loan ngày Phụ nữ Việt Nam 20/10.">
+  <title>Dành tặng Thanh Loan · 20/10</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='50' font-size='48'%3E🌷%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/Lora-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/Lora-Italic.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/fonts/BeVietnamPro-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three.module.js"}}</script>
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <header class="masthead">
+    <a class="wordmark" href="./" aria-label="Trang đầu">Dear you<span>✦</span></a>
+    <span class="date">20 / 10 <span>ngày Phụ nữ Việt Nam</span></span>
+    <button class="sound-button" id="soundButton" type="button" aria-pressed="false" aria-label="Bật nhạc nền"><span id="soundIcon">♫</span><span id="soundLabel">Bật nhạc</span></button>
+  </header>
+  <main>
+    <section class="intro" id="intro" aria-labelledby="introTitle">
+      <div class="botanical-decor" aria-hidden="true">
+        <img class="botanical-sprig sprig-left" src="assets/sprig.svg" alt="">
+        <img class="botanical-sprig sprig-right" src="assets/sprig.svg" alt="">
+        <span class="loose-petal petal-one"></span><span class="loose-petal petal-two"></span><span class="loose-petal petal-three"></span>
+      </div>
+      <div class="intro-content">
+        <p class="eyebrow">MỘT CHÚT DỊU DÀNG CHO NGÀY 20/10</p>
+        <h1 id="introTitle">Gửi cậu một<br><em>ngày tuyệt vời.</em></h1>
+        <p class="intro-recipient"><span id="introName">Thanh Loan</span> <span aria-hidden="true">✿</span></p>
+        <p class="intro-description">Một bó hoa, vài lời chúc.<br>Và một món quà nhỏ dành riêng cho cậu.</p>
+        <div class="gift-scene" id="giftScene">
+          <span class="gift-spark spark-one" aria-hidden="true">✧</span><span class="gift-spark spark-two" aria-hidden="true">✦</span>
+          <button id="giftButton" class="gift-button" type="button" aria-label="Mở quà 20/10 dành cho Thanh Loan">
+            <span class="gift-glow" aria-hidden="true"></span>
+            <span class="gift-box" aria-hidden="true"><span class="gift-ribbon"></span><span class="gift-label">for you<br><b>20.10</b></span></span>
+            <span class="gift-lid" aria-hidden="true"><span class="bow bow-left"></span><span class="bow bow-right"></span><span class="bow-knot"></span></span>
+          </button>
+          <span class="gift-shadow" aria-hidden="true"></span>
+        </div>
+        <p class="open-hint">Chạm để mở quà <span aria-hidden="true">↗</span></p>
+        <p class="little-note">Hôm nay, dành mọi lời chúc tốt đẹp nhất gửi cậu!</p>
+      </div>
+      <span class="flower-stamp" aria-hidden="true"><small>DÀNH TẶNG CẬU</small><b>20.10</b><span>✿</span></span>
+    </section>
+
+    <section class="celebration" id="celebration" aria-labelledby="greetingTitle" hidden>
+      <p class="eyebrow">CHÚC MỪNG NGÀY PHỤ NỮ VIỆT NAM</p>
+      <h1 id="greetingTitle" tabindex="-1">Luôn hạnh phúc nhé,<br><em id="recipientName">Thanh Loan</em></h1>
+      <p class="recipient" id="recipient"></p>
+      <div class="portrait-area">
+        <span class="portrait-orbit" aria-hidden="true"></span>
+        <span class="floating-note left-note" aria-hidden="true">luôn xinh đẹp<br>và tự tin <span>✿</span></span>
+        <span class="floating-note right-note" aria-hidden="true">tỏa sáng theo<br>cách của cậu <span>🌷</span></span>
+        <div id="characterStage" class="character-stage" role="group" aria-label="Nhân vật 3D tự xoay. Kéo để xoay theo tay, thả ra để tiếp tục tự xoay."></div>
+        <p id="renderNotice" class="render-notice" hidden></p>
+      </div>
+      <p class="drag-hint">↔ Kéo để ngắm 360° · Thả tay để tự xoay</p>
+      <article class="wish-card">
+        <p class="wish-kicker">MỘT LỜI CHÚC DÀNH CHO CẬU</p>
+        <p id="mainWish"></p>
+        <p class="memory-instruction">*Chạm vào các icon đang rơi để mở ảnh nhé.</p>
+      </article>
+
+      <section class="flower-section" aria-labelledby="flowerHeading">
+        <p class="eyebrow">MỘT BÓ HOA NHỎ</p>
+        <h2 id="flowerHeading">Dành tặng một ngày thật xinh.</h2>
+        <div class="bouquet" id="bouquet"><span class="bouquet-halo" aria-hidden="true"></span><img src="assets/bouquet.svg" width="420" height="460" alt="Bó hoa hồng và tulip, lá xanh, gói trong giấy kem với nơ hồng"></div>
+        <button class="flower-button" id="flowerButton" type="button">Nhận bó hoa này nhé</button>
+        <p class="flower-note" id="flowerNote" aria-live="polite">Một bó hoa nhỏ, một ngày thật tươi!.</p>
+      </section>
+
+      <section class="memory-section" aria-labelledby="memoryHeading">
+        <div class="memory-header"><span class="tiny-heart" aria-hidden="true">✦</span><h2 id="memoryHeading">Gom lại những ngày tuyệt vời!</h2></div>
+        <div class="memory-strip" id="memoryStrip" aria-label="Những tấm ảnh đã mở" hidden></div>
+      </section>
+      <div class="replay-area"><button type="button" id="replayButton" class="text-button">Gói quà lại, mở thêm lần nữa <span aria-hidden="true">↗</span></button></div>
+      <p class="closing-note">Chúc cậu một ngày 20/10 thật vui ✿</p>
+    </section>
+  </main>
+  <div id="fallingLayer" class="falling-layer" aria-label="Icon rơi để mở ảnh"></div>
+  <div id="confettiLayer" class="confetti-layer" aria-hidden="true"></div>
+  <div id="status" class="sr-only" role="status" aria-live="polite"></div>
+  <dialog id="memoryDialog" class="memory-dialog" aria-labelledby="memoryTitle">
+    <button id="closeDialog" class="dialog-close" type="button" aria-label="Đóng ảnh">×</button>
+    <span class="dialog-eyebrow">MỘT TẤM ẢNH, MỘT LỜI CHÚC</span><h2 id="memoryTitle">Một lời chúc dành cho cậu</h2>
+    <div class="photo-frame"><img id="memoryImage" alt=""><span id="photoNumber"></span></div>
+    <p id="memoryText"></p><span class="dialog-heart" aria-hidden="true">✦</span>
+  </dialog>
+  <audio id="music" src="assets/a.mp3" loop preload="none"></audio>
+  <noscript><p class="noscript">Hãy bật JavaScript để mở quà 20/10 và xem nhân vật 3D nhé.</p></noscript>
+</body>
+</html>
